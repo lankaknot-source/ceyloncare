@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +8,54 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="main-header">
         <div class="container header-container">
             <div class="logo-area">
                 <a href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                    <img src="logo.png" alt="" class="logo-img" style="max-height: 60px;" onerror="this.style.display='none'">
+                    <img src="logo.png" alt="" class="logo-img" style="max-height: 60px;"
+                        onerror="this.style.display='none'">
                     <div class="logo-text" style="display: flex; flex-direction: column;">
                         <span style="font-size: 1.6rem; font-weight: 800; color: var(--primary-green); line-height: 1;">Ceylon</span>
                         <span style="font-size: 1.1rem; font-weight: 700; color: var(--gold); line-height: 1.2;">Helpcare Services</span>
                     </div>
                 </a>
             </div>
-            
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="#services">Services <i class="fa-solid fa-chevron-down text-sm"></i></a></li>
-                    <li><a href="https://wa.me/94774428268" target="_blank">Contact Us</a></li>
-                </ul>
-            </nav>
 
-            <div class="header-contact">
-                <div class="phone-icon-wrapper">
-                    <i class="fa-solid fa-phone"></i>
+            <button class="mobile-menu-btn" onclick="document.getElementById('navContactWrapper').classList.toggle('active')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-contact-wrapper" id="navContactWrapper">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active" data-i18n="nav-home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav-about">About Us</a></li>
+                        <li><a href="#services"><span data-i18n="nav-services">Services</span> <i class="fa-solid fa-chevron-down text-sm"></i></a></li>
+                        <li><a href="https://wa.me/94774428268" target="_blank" data-i18n="nav-contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-contact">
+                    <div class="phone-icon-wrapper">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="phone-info">
+                        <span data-i18n="call-us">Call Us Anytime</span>
+                        <strong>+94 77 44 28 268</strong>
+                    </div>
+                    <a href="https://wa.me/94774428268" target="_blank" class="btn btn-primary">
+                        <i class="fa-regular fa-calendar-check"></i> <span data-i18n="book-now">Book Now</span>
+                    </a>
+                    <!-- Dedicated Language Toggle Button next to Book Now -->
+                    <button class="lang-toggle-btn">සිංහල</button>
                 </div>
-                <div class="phone-info">
-                    <span>Call Us Anytime</span>
-                    <strong>+94 77 44 28 268</strong>
-                </div>
-                <a href="https://wa.me/94774428268" target="_blank" class="btn btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Now</a>
             </div>
         </div>
     </header>
@@ -51,47 +65,38 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="trust-badge">
-                    <i class="fa-solid fa-heart"></i> YOUR TRUST, OUR RESPONSIBILITY
+                    <i class="fa-solid fa-heart"></i> <span data-i18n="hero-badge">YOUR TRUST, OUR RESPONSIBILITY</span>
                 </div>
-                <h2 class="hero-title">Trusted Care.<br><span class="text-green">Better Living.</span></h2>
-                <p class="hero-desc">Professional care and home services at your doorstep with 100% safety, responsibility and experienced staff.</p>
-                
+                <h2 class="hero-title" data-i18n="hero-title">Trusted Care.<br><span class="text-green">Better Living.</span></h2>
+                <p class="hero-desc" data-i18n="hero-desc">Professional care and home services at your doorstep with 100% safety, responsibility and experienced staff.</p>
+
                 <div class="hero-features">
                     <div class="feature-item">
                         <i class="fa-regular fa-circle-check"></i>
-                        <span>Trusted &<br>Reliable</span>
+                        <span data-i18n="feat-trusted">Trusted &<br>Reliable</span>
                     </div>
                     <div class="feature-item">
                         <i class="fa-solid fa-user-group"></i>
-                        <span>Trained &<br>Experienced</span>
+                        <span data-i18n="feat-trained">Trained &<br>Experienced</span>
                     </div>
                     <div class="feature-item">
                         <i class="fa-regular fa-heart"></i>
-                        <span>Compassionate<br>Care</span>
+                        <span data-i18n="feat-comp">Compassionate<br>Care</span>
                     </div>
                     <div class="feature-item">
                         <i class="fa-solid fa-tag"></i>
-                        <span>Affordable<br>Pricing</span>
+                        <span data-i18n="feat-price">Affordable<br>Pricing</span>
                     </div>
                 </div>
 
                 <div class="hero-actions">
-                    <a href="#services" class="btn btn-primary">Our Services <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="https://wa.me/94774428268" target="_blank" class="btn btn-outline">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#services" class="btn btn-primary"><span data-i18n="btn-services">Our Services</span> <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/94774428268" target="_blank" class="btn btn-outline"><span data-i18n="btn-contact">Contact Us</span> <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-            
+
             <div class="hero-image-area">
-                <img src="hero-bg.jpg" alt="Caregiver with elderly woman" class="hero-img">
-                <div class="guarantee-badge">
-                    <div class="badge-content">
-                        <span class="percent">100%</span>
-                        <span class="text">SAFE, RELIABLE<br>& RESPONSIBLE<br>SERVICE</span>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-                </div>
+                <img src="hero-bg.jpeg" alt="Caregiver with elderly woman" class="hero-img">
             </div>
         </div>
     </section>
@@ -102,10 +107,10 @@
             <div class="section-header">
                 <div class="section-title-wrapper">
                     <i class="fa-solid fa-leaf text-green"></i>
-                    <h2>Our Services</h2>
+                    <h2 data-i18n="srv-title">Our Services</h2>
                     <i class="fa-solid fa-leaf text-green" style="transform: scaleX(-1);"></i>
                 </div>
-                <p>One Call. Many Solutions.</p>
+                <p data-i18n="srv-subtitle">One Call. Many Solutions.</p>
             </div>
 
             <div class="services-grid">
@@ -118,9 +123,11 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="text-green">1. Nursing Care</h3>
-                        <p>Professional patient care, elderly care, wound dressing, BP & sugar checks, saline & cannula, and more.</p>
-                        <button class="btn btn-primary btn-sm btn-nursing" onclick="openModal('modal-nursing')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+                        <h3 class="text-green" data-i18n="srv-nursing-title">1. Nursing Care</h3>
+                        <p data-i18n="srv-nursing-desc">Professional patient care, elderly care, wound dressing, BP & sugar checks, saline & cannula, and more.</p>
+                        <button class="btn btn-primary btn-sm btn-nursing" onclick="openModal('modal-nursing')">
+                            <span data-i18n="btn-learn">Learn More</span> <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -129,13 +136,15 @@
                     <div class="card-img-wrapper">
                         <img src="service-beauty.jpg" alt="Beauty Services">
                         <div class="service-icon icon-beauty">
-                            <i class="fa-solid fa-face-smile"></i> <!-- Fallback icon -->
+                            <i class="fa-solid fa-face-smile"></i>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="text-pink">2. Beauty Services</h3>
-                        <p>Bridal & event makeup, facials, clean-ups, eyebrow shaping and all beauty treatments.</p>
-                        <button class="btn btn-primary btn-sm btn-beauty" onclick="openModal('modal-beauty')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+                        <h3 class="text-pink" data-i18n="srv-beauty-title">2. Beauty Services</h3>
+                        <p data-i18n="srv-beauty-desc">Bridal & event makeup, facials, clean-ups, eyebrow shaping and all beauty treatments.</p>
+                        <button class="btn btn-primary btn-sm btn-beauty" onclick="openModal('modal-beauty')">
+                            <span data-i18n="btn-learn">Learn More</span> <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -148,9 +157,11 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="text-blue">3. Home & Garden Cleaning</h3>
-                        <p>House, office & building cleaning, garden maintenance, laundry and ironing services.</p>
-                        <button class="btn btn-primary btn-sm btn-cleaning" onclick="openModal('modal-cleaning')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+                        <h3 class="text-blue" data-i18n="srv-cleaning-title">3. Home & Garden Cleaning</h3>
+                        <p data-i18n="srv-cleaning-desc">House, office & building cleaning, garden maintenance, laundry and ironing services.</p>
+                        <button class="btn btn-primary btn-sm btn-cleaning" onclick="openModal('modal-cleaning')">
+                            <span data-i18n="btn-learn">Learn More</span> <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -159,13 +170,15 @@
                     <div class="card-img-wrapper">
                         <img src="service-driving.jpg" alt="Driving Services">
                         <div class="service-icon icon-driving">
-                            <i class="fa-solid fa-steering-wheel"></i> <!-- Fallback icon -->
+                            <i class="fa-solid fa-steering-wheel"></i>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3 class="text-orange">4. Driving Services</h3>
-                        <p>Professional male & female drivers for any distance or urgent trips. Safe, reliable & comfortable.</p>
-                        <button class="btn btn-primary btn-sm btn-driving" onclick="openModal('modal-driving')">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+                        <h3 class="text-orange" data-i18n="srv-driving-title">4. Driving Services</h3>
+                        <p data-i18n="srv-driving-desc">Professional male & female drivers for any distance or urgent trips. Safe, reliable & comfortable.</p>
+                        <button class="btn btn-primary btn-sm btn-driving" onclick="openModal('modal-driving')">
+                            <span data-i18n="btn-learn">Learn More</span> <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -178,32 +191,32 @@
             <div class="banner-item">
                 <i class="fa-regular fa-shield-check banner-icon"></i>
                 <div class="banner-text">
-                    <h4>100% Safe & Reliable</h4>
-                    <p>Your safety is our top priority.</p>
+                    <h4 data-i18n="b-safe-title">100% Safe & Reliable</h4>
+                    <p data-i18n="b-safe-desc">Your safety is our top priority.</p>
                 </div>
             </div>
             <div class="banner-divider"></div>
             <div class="banner-item">
                 <i class="fa-solid fa-user-group banner-icon"></i>
                 <div class="banner-text">
-                    <h4>Trained & Experienced Staff</h4>
-                    <p>Well trained, kind & experienced workers.</p>
+                    <h4 data-i18n="b-staff-title">Trained & Experienced Staff</h4>
+                    <p data-i18n="b-staff-desc">Well trained, kind & experienced workers.</p>
                 </div>
             </div>
             <div class="banner-divider"></div>
             <div class="banner-item">
                 <i class="fa-solid fa-circle-dollar-to-slot banner-icon"></i>
                 <div class="banner-text">
-                    <h4>Affordable Pricing</h4>
-                    <p>Quality service within your budget.</p>
+                    <h4 data-i18n="b-price-title">Affordable Pricing</h4>
+                    <p data-i18n="b-price-desc">Quality service within your budget.</p>
                 </div>
             </div>
             <div class="banner-divider"></div>
             <div class="banner-item">
                 <i class="fa-solid fa-location-dot banner-icon"></i>
                 <div class="banner-text">
-                    <h4>Service Area</h4>
-                    <p>Kurunegala City & All Surrounding Areas</p>
+                    <h4 data-i18n="b-area-title">Service Area</h4>
+                    <p data-i18n="b-area-desc">Kurunegala City & All Surrounding Areas</p>
                 </div>
             </div>
         </div>
@@ -214,10 +227,12 @@
     <div id="modal-nursing" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('modal-nursing')">&times;</span>
-            <h3 class="text-green">Nursing Care Details</h3>
-            <p>Our professional nursing care includes comprehensive support tailored to your needs. Services cover elderly care, post-surgical recovery, wound dressing, regular BP & sugar monitoring, saline & cannula management, and medication administration.</p>
-            <p>We ensure that our trained staff provides compassionate and reliable care in the comfort of your home.</p>
-            <a href="https://wa.me/94774428268" target="_blank" class="btn btn-primary btn-nursing mt-15"><i class="fa-brands fa-whatsapp"></i> Inquire Now</a>
+            <h3 class="text-green" data-i18n="modal-nursing-title">Nursing Care Details</h3>
+            <p data-i18n="modal-nursing-p1">Our professional nursing care includes comprehensive support tailored to your needs. Services cover elderly care, post-surgical recovery, wound dressing, regular BP & sugar monitoring, saline & cannula management, and medication administration.</p>
+            <p data-i18n="modal-nursing-p2">We ensure that our trained staff provides compassionate and reliable care in the comfort of your home.</p>
+            <button class="btn btn-primary btn-nursing mt-15" onclick="openGlassModal('Nursing Care', 'modal-nursing')">
+                <i class="fa-regular fa-comment-dots"></i> <span data-i18n="modal-inquire">Inquire Now</span>
+            </button>
         </div>
     </div>
 
@@ -225,10 +240,12 @@
     <div id="modal-beauty" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('modal-beauty')">&times;</span>
-            <h3 class="text-pink">Beauty Services Details</h3>
-            <p>Experience premium beauty services right at your doorstep. We specialize in bridal and event makeup, offering customizable packages to make you look stunning on your special day.</p>
-            <p>Our experts also provide facials, deep clean-ups, precise eyebrow shaping, and a variety of other top-tier beauty treatments.</p>
-            <a href="https://wa.me/94774428268" target="_blank" class="btn btn-primary btn-beauty mt-15"><i class="fa-brands fa-whatsapp"></i> Book Appointment</a>
+            <h3 class="text-pink" data-i18n="modal-beauty-title">Beauty Services Details</h3>
+            <p data-i18n="modal-beauty-p1">Experience premium beauty services right at your doorstep. We specialize in bridal and event makeup, offering customizable packages to make you look stunning on your special day.</p>
+            <p data-i18n="modal-beauty-p2">Our experts also provide facials, deep clean-ups, precise eyebrow shaping, and a variety of other top-tier beauty treatments.</p>
+            <button class="btn btn-primary btn-beauty mt-15" onclick="openGlassModal('Beauty Services', 'modal-beauty')">
+                <i class="fa-regular fa-comment-dots"></i> <span data-i18n="modal-book">Book Appointment</span>
+            </button>
         </div>
     </div>
 
@@ -236,10 +253,12 @@
     <div id="modal-cleaning" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('modal-cleaning')">&times;</span>
-            <h3 class="text-blue">Home & Garden Cleaning Details</h3>
-            <p>Maintain a pristine environment with our comprehensive cleaning solutions. We offer house, office, and building cleaning with attention to detail.</p>
-            <p>Additionally, our services extend to garden maintenance, laundry, and ironing to keep your entire property looking its best.</p>
-            <a href="https://wa.me/94774428268" target="_blank" class="btn btn-primary btn-cleaning mt-15"><i class="fa-brands fa-whatsapp"></i> Get a Quote</a>
+            <h3 class="text-blue" data-i18n="modal-cleaning-title">Home & Garden Cleaning Details</h3>
+            <p data-i18n="modal-cleaning-p1">Maintain a pristine environment with our comprehensive cleaning solutions. We offer house, office, and building cleaning with attention to detail.</p>
+            <p data-i18n="modal-cleaning-p2">Additionally, our services extend to garden maintenance, laundry, and ironing to keep your entire property looking its best.</p>
+            <button class="btn btn-primary btn-cleaning mt-15" onclick="openGlassModal('Home & Garden Cleaning', 'modal-cleaning')">
+                <i class="fa-regular fa-comment-dots"></i> <span data-i18n="modal-quote">Get a Quote</span>
+            </button>
         </div>
     </div>
 
@@ -247,10 +266,12 @@
     <div id="modal-driving" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('modal-driving')">&times;</span>
-            <h3 class="text-orange">Driving Services Details</h3>
-            <p>Need a reliable driver? We provide professional male and female drivers for both short local trips and long-distance travel, as well as urgent transport needs.</p>
-            <p>Your safety and comfort are our top priorities, ensuring a stress-free journey every time.</p>
-            <a href="https://wa.me/94774428268" target="_blank" class="btn btn-primary btn-driving mt-15"><i class="fa-brands fa-whatsapp"></i> Request Driver</a>
+            <h3 class="text-orange" data-i18n="modal-driving-title">Driving Services Details</h3>
+            <p data-i18n="modal-driving-p1">Need a reliable driver? We provide professional male and female drivers for both short local trips and long-distance travel, as well as urgent transport needs.</p>
+            <p data-i18n="modal-driving-p2">Your safety and comfort are our top priorities, ensuring a stress-free journey every time.</p>
+            <button class="btn btn-primary btn-driving mt-15" onclick="openGlassModal('Driving Services', 'modal-driving')">
+                <i class="fa-regular fa-comment-dots"></i> <span data-i18n="modal-request">Request Driver</span>
+            </button>
         </div>
     </div>
 
@@ -261,12 +282,113 @@
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
         }
-        // Close modal when clicking outside of it
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target.classList.contains('modal')) {
                 event.target.style.display = "none";
             }
+            if (event.target.classList.contains('glass-modal')) {
+                closeGlassModal();
+            }
         }
     </script>
+
+    <!-- Liquid Glass Inquiry Modal -->
+    <div id="glassInquiryModal" class="glass-modal">
+        <div class="glass-modal-content">
+            <button class="glass-close-btn" onclick="closeGlassModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="glass-modal-header">
+                <h3 data-i18n="glass-title">Book a Service</h3>
+            </div>
+            <form id="inquiryForm" onsubmit="sendWhatsApp(event)">
+                <div class="glass-form-group">
+                    <label data-i18n="glass-name">Full Name</label>
+                    <input type="text" id="waName" class="glass-input" required placeholder="John Doe">
+                </div>
+                <div class="glass-form-group">
+                    <label data-i18n="glass-phone">Contact Number</label>
+                    <input type="tel" id="waPhone" class="glass-input" required placeholder="07XXXXXXXX">
+                </div>
+                <div class="glass-form-group">
+                    <label data-i18n="glass-address">Home Address</label>
+                    <input type="text" id="waAddress" class="glass-input" required placeholder="123 Main St, Kurunegala">
+                </div>
+                <div class="glass-form-group">
+                    <label data-i18n="glass-service">Service Type</label>
+                    <select id="waService" class="glass-input" required>
+                        <option value="Nursing Care" data-i18n="opt-nursing">Nursing Care</option>
+                        <option value="Beauty Services" data-i18n="opt-beauty">Beauty Services</option>
+                        <option value="Home & Garden Cleaning" data-i18n="opt-cleaning">Home & Garden Cleaning</option>
+                        <option value="Driving Services" data-i18n="opt-driving">Driving Services</option>
+                        <option value="Other" data-i18n="opt-other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="glass-submit-btn">
+                    <i class="fa-brands fa-whatsapp"></i> <span data-i18n="glass-submit">Send to WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const glassModal = document.getElementById('glassInquiryModal');
+        
+        function openGlassModal(serviceName, parentModalId) {
+            if(parentModalId) {
+                closeModal(parentModalId);
+            }
+            
+            const selectBox = document.getElementById('waService');
+            for(let i=0; i<selectBox.options.length; i++) {
+                if(selectBox.options[i].value === serviceName) {
+                    selectBox.selectedIndex = i;
+                    break;
+                }
+            }
+            
+            glassModal.style.display = 'flex';
+            setTimeout(() => {
+                glassModal.classList.add('show');
+            }, 10);
+        }
+
+        function closeGlassModal() {
+            glassModal.classList.remove('show');
+            setTimeout(() => {
+                glassModal.style.display = 'none';
+            }, 300);
+        }
+
+        function sendWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('waName').value;
+            const phone = document.getElementById('waPhone').value;
+            const address = document.getElementById('waAddress').value;
+            const service = document.getElementById('waService').value;
+
+            const text = `Hello CeylonCare! I would like to book a service.%0A%0A*Name:* ${name}%0A*Contact:* ${phone}%0A*Address:* ${address}%0A*Service Required:* ${service}%0A%0APlease get back to me.`;
+            const waUrl = `https://wa.me/94774428268?text=${text}`;
+            
+            window.open(waUrl, '_blank');
+            closeGlassModal();
+        }
+    </script>
+	<footer class="main-footer" style="background-color: #111111; color: #ffffff; padding: 40px 0 20px 0; font-family: 'Inter', sans-serif; margin-top: 50px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; align-items: center; gap: 15px; text-align: center;">
+            <div class="footer-logo" style="display: flex; flex-direction: column; align-items: center; line-height: 1.2;">
+                <span style="font-size: 1.5rem; font-weight: 800; color: var(--primary-green); letter-spacing: 0.5px;">Ceylon</span>
+                <span style="font-size: 1rem; font-weight: 700; color: var(--gold);">Helpcare Services</span>
+            </div>
+            
+            <div class="footer-copyright" style="font-size: 0.9rem; color: #aaaaaa; font-weight: 400;">
+                &copy; 2026 Ceylon Helpcare Services. All Rights Reserved.
+            </div>
+            
+            <div class="footer-credit" style="font-size: 0.85rem; color: #777777; border-top: 1px solid #222222; width: 100%; padding-top: 15px; margin-top: 5px; letter-spacing: 0.3px;">
+                Designed & Developed by <a href="#" target="_blank" style="color: var(--primary-green); text-decoration: none; font-weight: 600; transition: all 0.3s ease;">Lankaknot Software Solution</a>
+            </div>
+        </div>
+    </footer>
+    <script src="chatbot.js"></script>
 </body>
+
 </html>
