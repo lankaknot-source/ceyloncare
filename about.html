@@ -39,7 +39,7 @@
         <div class="container header-container">
             <div class="logo-area">
                 <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                    <img src="images/logo.png" alt="" class="logo-img" style="max-height: 60px;" onerror="this.style.display='none'">
+                    <img src="logo.png" alt="" class="logo-img" style="max-height: 60px;" onerror="this.style.display='none'">
                     <div class="logo-text" style="display: flex; flex-direction: column;">
                         <span style="font-size: 1.6rem; font-weight: 800; color: var(--primary-green); line-height: 1;">Ceylon</span>
                         <span style="font-size: 1.1rem; font-weight: 700; color: var(--gold); line-height: 1.2;">Helpcare Services</span>
@@ -47,24 +47,34 @@
                 </a>
             </div>
             
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="index.html#services">Services <i class="fa-solid fa-chevron-down text-sm"></i></a></li>
-                    <li><a href="https://wa.me/94774428268" target="_blank">Contact Us</a></li>
-                </ul>
-            </nav>
+            <button class="mobile-menu-btn" onclick="document.getElementById('navContactWrapper').classList.toggle('active')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <div class="nav-contact-wrapper" id="navContactWrapper">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                        <li><a href="about.html" class="active" data-i18n="nav-about">About Us</a></li>
+                        <li><a href="index.html#services"><span data-i18n="nav-services">Services</span> <i class="fa-solid fa-chevron-down text-sm"></i></a></li>
+                        <li><a href="https://wa.me/94774428268" target="_blank" data-i18n="nav-contact">Contact Us</a></li>
+                    </ul>
+                </nav>
 
-            <div class="header-contact">
-                <div class="phone-icon-wrapper">
-                    <i class="fa-solid fa-phone"></i>
+                <div class="header-contact">
+                    <div class="phone-icon-wrapper">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="phone-info">
+                        <span data-i18n="call-us">Call Us Anytime</span>
+                        <strong>+94 77 44 28 268</strong>
+                    </div>
+                    <a href="https://wa.me/94774428268" target="_blank" class="btn btn-primary">
+                        <i class="fa-regular fa-calendar-check"></i> <span data-i18n="book-now">Book Now</span>
+                    </a>
+                    <!-- Dedicated Language Toggle Button next to Book Now -->
+                    <button class="lang-toggle-btn">සිංහල</button>
                 </div>
-                <div class="phone-info">
-                    <span>Call Us Anytime</span>
-                    <strong>+94 77 44 28 268</strong>
-                </div>
-                <a href="https://wa.me/94774428268" target="_blank" class="btn btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Now</a>
             </div>
         </div>
     </header>
@@ -75,16 +85,18 @@
             <div class="about-content-wrapper">
                 <div class="section-title-wrapper" style="justify-content: center; margin-bottom: 20px;">
                     <i class="fa-solid fa-leaf text-green"></i>
-                    <h2 class="about-title">About Us</h2>
+                    <h2 class="about-title" data-i18n="about-title">About Us</h2>
                     <i class="fa-solid fa-leaf text-green" style="transform: scaleX(-1);"></i>
                 </div>
-                <p class="about-text">
+                <p class="about-text" data-i18n="about-p1">
                     Welcome to <strong>Ceylon Helpcare Services</strong>. We are dedicated to providing compassionate, reliable, and professional care solutions directly to your doorstep. Our mission is to improve the quality of life for our clients by ensuring they receive the highest standard of service in a safe and familiar environment.
                 </p>
-                <p class="about-text">
+                <p class="about-text" data-i18n="about-p2">
                     With a team of highly trained and experienced professionals, we offer a wide range of services including specialized nursing care, beauty treatments, home and garden maintenance, and safe driving services. Your trust is our responsibility, and we strive to build lasting relationships based on respect, integrity, and exceptional care.
                 </p>
-                <a href="https://wa.me/94774428268" target="_blank" class="btn btn-primary mt-15" style="margin-top: 20px;">Get in Touch</a>
+                <a href="https://wa.me/94774428268" target="_blank" class="btn btn-primary mt-15" style="margin-top: 20px;">
+                    <span data-i18n="about-btn">Get in Touch</span>
+                </a>
             </div>
         </div>
     </section>
@@ -95,36 +107,37 @@
             <div class="banner-item">
                 <i class="fa-regular fa-shield-check banner-icon"></i>
                 <div class="banner-text">
-                    <h4>100% Safe & Reliable</h4>
-                    <p>Your safety is our top priority.</p>
+                    <h4 data-i18n="b-safe-title">100% Safe & Reliable</h4>
+                    <p data-i18n="b-safe-desc">Your safety is our top priority.</p>
                 </div>
             </div>
             <div class="banner-divider"></div>
             <div class="banner-item">
                 <i class="fa-solid fa-user-group banner-icon"></i>
                 <div class="banner-text">
-                    <h4>Trained & Experienced Staff</h4>
-                    <p>Well trained, kind & experienced workers.</p>
+                    <h4 data-i18n="b-staff-title">Trained & Experienced Staff</h4>
+                    <p data-i18n="b-staff-desc">Well trained, kind & experienced workers.</p>
                 </div>
             </div>
             <div class="banner-divider"></div>
             <div class="banner-item">
                 <i class="fa-solid fa-circle-dollar-to-slot banner-icon"></i>
                 <div class="banner-text">
-                    <h4>Affordable Pricing</h4>
-                    <p>Quality service within your budget.</p>
+                    <h4 data-i18n="b-price-title">Affordable Pricing</h4>
+                    <p data-i18n="b-price-desc">Quality service within your budget.</p>
                 </div>
             </div>
             <div class="banner-divider"></div>
             <div class="banner-item">
                 <i class="fa-solid fa-location-dot banner-icon"></i>
                 <div class="banner-text">
-                    <h4>Service Area</h4>
-                    <p>Kurunegala City & All Surrounding Areas</p>
+                    <h4 data-i18n="b-area-title">Service Area</h4>
+                    <p data-i18n="b-area-desc">Kurunegala City & All Surrounding Areas</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <script src="chatbot.js"></script>
 </body>
 </html>
